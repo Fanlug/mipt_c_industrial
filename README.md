@@ -1,2 +1,2 @@
-# mipt_c_industrial
-C Tasks for mipt
+# quadratic_equation
+C Task 1 for mipt
