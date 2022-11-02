@@ -19,15 +19,19 @@ int main(int argc, char* argv[])
         {
             printf("\nRoot: %f", (-c) / b);
         }
-    }else {
+    }
+    else 
+    {
         float discremenant = b * b - 4 * a * c;
         if (discremenant < 0) {
             printf("\nNo roots");
         }
-        else if (discremenant == 0) {
+        else if (discremenant == 0) 
+        {
             printf("\nRoot: %f",-b/(2*a));
         }
-        else {
+        else 
+        {
             printf("\nRoots: x_1=%f, x_2=%f",
                    ((-b) + sqrtf(discremenant)) / (2 * a),
                    ((-b) - sqrtf(discremenant)) / (2 * a));
