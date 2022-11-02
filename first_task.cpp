@@ -6,7 +6,8 @@ int main(int argc, char* argv[])
     float c, b, a;
     printf("Equations of  a^2+bx+c = 0 type solver\n Enter a b and c float values\n");
     scanf("%f %f %f",&a,&b,&c);
-    if (a == 0) {
+    if (a == 0) 
+    {
         if ((b == 0) && (c != 0))
         {
             printf("\nNo Roots");
@@ -23,7 +24,8 @@ int main(int argc, char* argv[])
     else 
     {
         float discremenant = b * b - 4 * a * c;
-        if (discremenant < 0) {
+        if (discremenant < 0) 
+        {
             printf("\nNo roots");
         }
         else if (discremenant == 0) 
