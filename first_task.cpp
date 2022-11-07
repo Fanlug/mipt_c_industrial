@@ -14,19 +14,14 @@ void inputValues(double *a, double *b, double *c){
 }
 
 void printRoots(Roots *roots){
-    if(roots->quantity==-1)
-    {
-        printf("Any root");
-    }
-    else if(roots->quantity == 0)
-    {
-        printf("No roots");
-    }
-    else if(roots->quantity > 0){
-        for (size_t i = 1; i <= roots->quantity; i++)
-        {
-            printf("x%d=%lf \n",i,roots->roots[i-1]);
-        }
+    switch(roots->quantity){
+        case -1:  printf("Any root");break;
+        case 0:   printf("No roots");break;
+        default: 
+            for (size_t i = 1; i <= roots->quantity; i++)
+            {
+                printf("x%d=%lf \n",i,roots->roots[i-1]);
+            }break;
     }
 }
 
