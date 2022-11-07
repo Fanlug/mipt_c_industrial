@@ -25,18 +25,18 @@ void printRoots(Roots *roots){
     else if(roots->quantity > 0){
         for (size_t i = 1; i <= roots->quantity; i++)
         {
-            printf("x%d=%f",i,roots->roots[i-1]);
+            printf("x%d=%lf \n",i,roots->roots[i-1]);
         }
     }
 }
 
 void solver(double a,double b,double c,Roots *roots){
-    if( a==0.0){
-        if ((b == 0.0) && (c != 0.0))
+    if( 0.001>abs(a)){
+        if ( 0.001>abs(b) &&  0.001<abs(c))
         {
             roots->quantity = 0;
         }
-        else if (b == 0.0)
+        else if (0.001>abs(b))
         {
             roots->quantity = -1;
         }
@@ -53,7 +53,7 @@ void solver(double a,double b,double c,Roots *roots){
         {
             roots->quantity = 0;
         }
-        else if (discremenant == 0.0) 
+        else if (0.001>discremenant) 
         {
             roots->roots[0] = -b/(2 * a);
             roots->quantity = 1;
